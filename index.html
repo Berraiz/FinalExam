@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVille Courier Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            max-width: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JSVille Courier Management System</h1>
+    <h2>Enter Package Details</h2>
+    <form id="packageForm">
+        <label for="recipientName">Recipient Name:</label><br>
+        <input type="text" id="recipientName" required><br><br>
+        <label for="packageID">Package ID (numeric):</label><br>
+        <input type="number" id="packageID" required><br><br>
+        <label for="deliveryAddress">Delivery Address:</label><br>
+        <input type="text" id="deliveryAddress" required><br><br>
+        <label for="weight">Weight (kg):</label><br>
+        <input type="number" step="0.01" id="weight" required><br><br>
+        <button type="submit">Add Package</button>
+    </form>
+
+    <div id="messages"></div>
+
+    <h2>Sorted Packages</h2>
+    <table id="packageTable">
+        <thead>
+            <tr>
+                <th>Recipient Name</th>
+                <th>Package ID</th>
+                <th>Delivery Address</th>
+                <th>Weight (kg)</th>
+                <th>Tracking Code</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+<script src="script.js"></script>
+
+</html>
